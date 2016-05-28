@@ -80,7 +80,7 @@
 }
 
 - (void)stickerViewDidTapContentView:(StickerView *)stickerView {
-    NSLog(@"Tap[%ld] ContentView", (long)stickerView.tag);
+    NSLog(@"Tap[%zd] ContentView", stickerView.tag);
     if (self.selectedSticker) {
         self.selectedSticker.enabledBorder = NO;
         self.selectedSticker.enabledControl = NO;
@@ -91,7 +91,7 @@
 }
 
 - (void)stickerViewDidTapDeleteControl:(StickerView *)stickerView {
-    NSLog(@"Tap[%ld] DeleteControl", (long)stickerView.tag);
+    NSLog(@"Tap[%zd] DeleteControl", stickerView.tag);
     for (UIView *subView in self.view.subviews) {
         if ([subView isKindOfClass:[StickerView class]]) {
             [(StickerView *)subView performTapOperation];
@@ -101,7 +101,7 @@
 }
 
 - (void)stickerViewDidTapLeftBottomControl:(StickerView *)stickerView {
-    NSLog(@"Tap[%ld] LeftBottomControl", (long)stickerView.tag);
+    NSLog(@"Tap[%zd] LeftBottomControl", stickerView.tag);
     UIImageOrientation targetOrientation = (stickerView.contentImage.imageOrientation == UIImageOrientationUp ? UIImageOrientationUpMirrored : UIImageOrientationUp);
     UIImage *invertImage =[UIImage imageWithCGImage:stickerView.contentImage.CGImage
                                               scale:1.0
@@ -110,7 +110,7 @@
 }
 
 - (void)stickerViewDidTapRightTopControl:(StickerView *)stickerView {
-    NSLog(@"Tap[%ld] RightTopControl", (long)stickerView.tag);
+    NSLog(@"Tap[%zd] RightTopControl", stickerView.tag);
     [_animator removeAllBehaviors];
     UISnapBehavior * snapbehavior = [[UISnapBehavior alloc] initWithItem:stickerView snapToPoint:self.view.center];
     snapbehavior.damping = 0.65;

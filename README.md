@@ -60,7 +60,7 @@ you even can custom the sticker view through the delegate
 <img src="https://github.com/chenkaijie4ever/Single-hand-Sticker/blob/master/ScreenShot/1.gif" width="315" />
 <img src="https://github.com/chenkaijie4ever/Single-hand-Sticker/blob/master/ScreenShot/2.gif" width="315" />
 
-##Author
+## Author
 
 Chen Kaijie  
 
